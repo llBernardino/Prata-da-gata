@@ -7,14 +7,18 @@ background-color:black;
 `
 export const BackgroundPratas = styled.div`
   background: no-repeat;
-  background: ${background}; 
   background-size: cover;
   background-position: center;
   height:175px;
   border-radius:10px 10px 0px 0px;
 `
+export const Image1 = styled.img`
+  height: 100%;
+  width: 100%;
+  border-radius: 6px 6px 0px 0px;
+`
 export const BackgroundHero = styled.div`
-  margin-top: 143px;
+ 
 `
 export const H1 = styled.h1`
   color:white;

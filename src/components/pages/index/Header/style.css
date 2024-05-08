@@ -1,0 +1,9 @@
+
+
+@media (max-width:760px) {
+    .mobal{
+        display: flex;
+        flex-direction: column;
+        
+    }
+  }
