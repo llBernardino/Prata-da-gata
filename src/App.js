@@ -1,13 +1,15 @@
 import React from 'react';
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {Hero} from './components/pages/index/Hero/index.js';
-import {SHeader} from './components/pages/index/Header/index.js';
+import {Products} from './components/Products/index.js';
+import {SHeader} from './components/Header/index.js';
+import {Hero} from './components/Hero/index.js';
 function App() {
   return (
     <div className="App">
       <SHeader/>
-     <Hero/>
+      <Hero/>
+     <Products/>
     </div>
   );
 }

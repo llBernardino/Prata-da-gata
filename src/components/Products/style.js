@@ -1,9 +1,9 @@
 
 import styled from '@emotion/styled'
-import pulseiraa from '../../img/pulseiraa.jpg'
-const background = () => `url('${pulseiraa}')`
+import backgroundprodutos from '../../img/backgroundprodutos.jpg'
+const background = () => `url('${backgroundprodutos}')`
 export const Content = styled.div`
-background-color:black;
+
 `
 export const BackgroundPratas = styled.div`
   background: no-repeat;
@@ -17,12 +17,15 @@ export const Image1 = styled.img`
   width: 100%;
   border-radius: 6px 6px 0px 0px;
 `
-export const BackgroundHero = styled.div`
- 
+export const Backgroundproducts = styled.div`
+background-color:white;
 `
-export const H1 = styled.h1`
-  color:white;
+export const H1 = styled.h2`
+  color:black;
   padding-top: 33px;
+  font-family: auto;
+  letter-spacing: 10px;
+  font-size: 55px;
 `
 export  const Container = styled.div`
   width: 100%;
@@ -34,14 +37,15 @@ export const Card = styled.article`
   width: 220px;
   min-height: 335px;
   border-radius: 10px;
-  background: white;
+  background: black;
   box-shadow: 0px 2.5px black;
   border-bottom: 1px solid black;
-  box-shadow: #f8f9fa 0px 0px 15px, rgba(0, 0, 0, 0.07) 0px 32px 68px, rgba(0, 0, 0, 0.07) 0px 4px 59px, rgba(0, 0, 0, 0.07) 0px 8px 49px, rgba(0, 0, 0, 0.07) 0px 16px 104px;
+  box-shadow: #f8f9fa 0px 0px 15px, rgba(0, 0, 0, 0.2) 0px 32px 68px, rgba(0, 0, 0, 0.07) 0px 4px 59px, rgba(0, 0, 0, 0.07) 0px 8px 49px, rgba(0, 0, 0, 0.07) 0px 16px 104px;
 `;
 export const Figure = styled.figure`
   text-align:start;
   margin:0px;
+  margin-top:4px;
   display:flex;
 `
 export const Title = styled.p`
@@ -50,10 +54,14 @@ export const Title = styled.p`
   line-height: 1.5;
   text-align: left;
   font-weight: bold;
+  color:white;
   padding-bottom: 6px;
+  font-family: auto;
+  letter-spacing: 1px;
 `;
 export const Image = styled.img`
   margin:0px auto;
+  margin-top:4px;
 `
 export const Caption = styled.div`
   padding: 10px 15px;
@@ -67,11 +75,13 @@ export const Iconpoints = styled.img`
 `
 export const Descript = styled.p`
 font-size: 14px;
+color:white;
 `
 export const ValueDescript= styled.div`
   display:flex;
   justify-content: space-between;
-    align-items: center;
+  align-items: center;
+  color:white;
 
 `
 export const ValueText = styled.p`

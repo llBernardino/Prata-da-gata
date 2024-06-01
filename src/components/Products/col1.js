@@ -11,7 +11,7 @@ export const Col1 = (props) => {
     return (
         <Col lg={3} md={6} sm={12}  className="justify-content-center d-flex my-5">
             <Card>
-                <a href={props.linkwhats}>
+                <a href={props.linkwhats} target="_blank">
                     <BackgroundPratas>
                         <Image1 src={props.imagem}  alt='React' />
                     </BackgroundPratas>

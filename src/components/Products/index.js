@@ -1,18 +1,18 @@
 import React from 'react';
 import Row from 'react-bootstrap/Row';
-import logoprata from '../../img/logoprata.jpg'
+import logoprata from '../../img/logoprata1.jpeg'
 import pulseiraa from '../../img/pulseiraa.jpg'
 import {
- Content,BackgroundHero, Container, H1,
+ Content,Backgroundproducts, Container, H1,
 } from './style.js'
 import {
   Col1
  } from './col1.js'
-export const Hero = () => {
+export const Products = () => {
 
   return (
     <Content>
-      <BackgroundHero>
+      <Backgroundproducts>
           <Container>
             <H1 className="text-center">NOVIDADES! COMPRE JÁ:</H1>
             <Row className="justify-content-center d-flex w-100">
@@ -66,7 +66,7 @@ export const Hero = () => {
               />
             </Row>
           </Container>
-        </BackgroundHero>
+        </Backgroundproducts>
     </Content>
     
   );
