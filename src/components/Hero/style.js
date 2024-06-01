@@ -4,8 +4,11 @@ import bannerprata from '../../img/bannerprata.jpg'
 
 const background = () => `url('${ bannerprata}')`
 export const Content = styled.div`
-  background-color:black;
   padding-top: 100px;
+
+  @media (max-width: 320px) {
+  padding-top: 45px;
+}
 `
 export const BackgroundHero = styled.div`
   min-height:700px;
@@ -20,7 +23,7 @@ export const BackgroundHero = styled.div`
     background-position: calc(45% + -0.0938rem) 0rem, calc(50% + -14.2062rem) 19.5625rem, 0 0;
   }
   @media (max-width: 320px) {
-    background-position: calc(45% + -7.0938rem) 0rem,calc(50% + -14.2062rem) 19.5625rem,0 0;
+    background-position:calc(45% + 3.9062rem) 1rem,calc(50% + -14.2062rem) 19.5625rem,0 0;
     min-height: 500px;
   }
   
@@ -39,11 +42,15 @@ export const Title = styled.h3`
   font-weight: 700;
   color: white;
   font-family: 'Raleway';
+  
+  
 `
 export const TextHero = styled.p`
-margin-bottom:30px;
-font-size: 20px;
-color: aliceblue;
+  margin-bottom:30px;
+  font-size: 20px;
+  color: aliceblue;
+
+ 
 `
 export  const Container = styled.div`
   width: 100%;

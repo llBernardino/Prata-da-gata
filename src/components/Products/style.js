@@ -19,18 +19,26 @@ export const Image1 = styled.img`
 `
 export const Backgroundproducts = styled.div`
 background-color:white;
+    display: flex;
+    justify-content: center;
 `
 export const H1 = styled.h2`
-  color:black;
+  color:#024302;
   padding-top: 33px;
   font-family: auto;
   letter-spacing: 10px;
   font-size: 55px;
+  @media (max-width: 780px) {
+    font-size: 30px;
+  }
 `
 export  const Container = styled.div`
   width: 100%;
   max-width:1200px;
   margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-direction:column;
 
 `
 export const Card = styled.article`
