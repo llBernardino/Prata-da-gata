@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import {
   AppBar,
-  Button,
   Tab,
   Tabs,
   Toolbar,
@@ -10,9 +9,7 @@ import {
 import {Image} from './style'
 import logoheader from '../../img/logoprata.jpg';
 import {DrawerComp} from "./drawer";
-import PersonIcon from '@mui/icons-material/Person';
 import { ThemeProvider } from '@mui/material/styles';
-import { TextField } from '@mui/material';
 import {theme} from '../../themes/themes'
 import { Link } from "react-router-dom";
 export const Headerr = () => {
@@ -39,7 +36,6 @@ export const Headerr = () => {
                   <Tab component={Link} to='/Products' sx={{ fontWeight: '600', fontSize: '14px', fontFamily: '"Roboto", Sans-serif', color: '#7a7a7a' }} label="Produtos" />
                   <Tab component={Link} to='/Contact' sx={{ fontWeight: '600', fontSize: '14px', fontFamily: '"Roboto", Sans-serif', color: '#7a7a7a' }} label="Contato" />
                 </Tabs>
-                <TextField id="outlined-basic" label=" Pesquisar" variant="outlined" color="success" sx={{ width: "33%" ,  }}/>
               </>
             )}
           </Toolbar>

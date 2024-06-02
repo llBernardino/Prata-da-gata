@@ -4,6 +4,7 @@ import {
 } from './style.js'
 import { Box, Button,ThemeProvider} from '@mui/material';
 import {theme} from '../../themes/themes.js'
+import scrollToPosition from '../../button/button.js'
 export const Hero = () => {
 
   return (
@@ -16,7 +17,7 @@ export const Hero = () => {
                 <Box my={4} display='flex' alignItems='start' p={2} flexDirection = 'column'  justifyContent='center' maxWidth={652} className='select'>
                   <Title>Bem-vindo à prata da gata, onde a sofisticação encontra o brilho da prata!</Title>
                   <TextHero>Nossos acessórios de prata são cuidadosamente selecionados para oferecer peças que combinam qualidade e design único. De colares deslumbrantes a anéis detalhadamente trabalhados, temos algo especial para cada ocasião.</TextHero>
-                  <Button variant='contained'>CATÁLOGO</Button> 
+                  <Button id="botao" variant='contained' onClick={scrollToPosition}>CATÁLOGO</Button>
                 </Box>
               </Box>
             </Container>

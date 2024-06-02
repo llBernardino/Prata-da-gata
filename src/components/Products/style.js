@@ -17,6 +17,7 @@ export const Image1 = styled.img`
   width: 100%;
   border-radius: 6px 6px 0px 0px;
 `
+
 export const Backgroundproducts = styled.div`
 background-color:white;
     display: flex;
@@ -24,7 +25,7 @@ background-color:white;
 `
 export const H1 = styled.h2`
   color:#024302;
-  padding-top: 33px;
+  padding: 33px 0px;
   font-family: auto;
   letter-spacing: 10px;
   font-size: 55px;
@@ -67,6 +68,15 @@ export const Title = styled.p`
   font-family: auto;
   letter-spacing: 1px;
 `;
+export const Title2 = styled.h3`
+
+  font-size: 25px;
+  text-align:center;
+  font-weight: 700;
+  color:darkgreen;
+  font-family: auto;
+  
+`
 export const Image = styled.img`
   margin:0px auto;
   margin-top:4px;
