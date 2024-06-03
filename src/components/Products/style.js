@@ -56,6 +56,7 @@ export const Figure = styled.figure`
   margin:0px;
   margin-top:4px;
   display:flex;
+  
 `
 export const Title = styled.p`
   margin:0px;
@@ -78,8 +79,9 @@ export const Title2 = styled.h3`
   
 `
 export const Image = styled.img`
-  margin:0px auto;
-  margin-top:4px;
+  margin:0px 4px;
+ 
+  
 `
 export const Caption = styled.div`
   padding: 10px 15px;

@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import Row from 'react-bootstrap/Row';
 import { Content, Backgroundproducts, Container, H1,Title2 } from './style.js';
 import { Col1 } from './col1.js';
-import { Box} from '@mui/material';
-import SearchBar from '../../Search/searchbar.js';
-import { products } from '../../productsdata/productsData.js';// Importe os dados dos produtos
+import {Box} from '@mui/material';
+import {SearchBar} from '../../Search/searchbar.js';
+import { products } from '../../productsdata/productsData.js';// Importa os dados dos produtos
 import stringSimilarity from 'string-similarity'; 
 
 export const Products = () => {
@@ -33,7 +33,9 @@ export const Products = () => {
       <Backgroundproducts>
         <Container>
           <H1 className="text-center">NOVIDADES! COMPRE JÁ:</H1>
-          <SearchBar onSearch={handleSearch} /> {/* Adicione a barra de pesquisa */}
+          <Box sx={{maxWidth:800, width:'100%', padding:'0px 20px'}}>
+            <SearchBar onSearch={handleSearch} /> {/* Adicione a barra de pesquisa */}
+          </Box>
           <Row className="justify-content-center d-flex w-100">
             {combinedProducts.length > 0 ? (
               combinedProducts.map((product, index) => (

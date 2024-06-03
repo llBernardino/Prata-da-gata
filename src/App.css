@@ -38,3 +38,16 @@
     transform: rotate(360deg);
   }
 }
+.css-heg063-MuiTabs-flexContainer {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+@media (max-width: 595px) {
+  .css-mvee9g-MuiToolbar-root {
+    justify-content: space-between;
+    display: flex !important;
+  }
+}

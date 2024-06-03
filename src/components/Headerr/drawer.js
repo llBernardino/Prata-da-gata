@@ -85,10 +85,10 @@ export const DrawerComp = () => {
         </List>
       </Drawer>
       <IconButton
-        sx={{ color: "white", }}
+        sx={{ color: "darkgreen", }}
         onClick={() => setOpenDrawer(!openDrawer)}
       >
-        <MenuIcon color="success" sx={{ padding: "0", paddingRight:"35px" }} />
+        <MenuIcon  sx={{color: "darkgreen", padding: "0",  }} />
       </IconButton>
     </React.Fragment>
   );
