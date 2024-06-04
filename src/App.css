@@ -1,6 +1,8 @@
 .App {
   
 }
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Eczar:wght@400..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
 .App-logo {
   height: 40vmin;
@@ -35,4 +37,42 @@
   to {
     transform: rotate(360deg);
   }
+}
+.css-heg063-MuiTabs-flexContainer {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+@media (max-width: 595px) {
+  .css-mvee9g-MuiToolbar-root {
+    justify-content: space-between;
+    display: flex !important;
+  }
+}
+
+/* carousel.css */
+.slick-prev, .slick-next {
+  width: 30px;
+  height: 30px;
+  z-index: 1;
+}
+
+.slick-prev {
+  left: 10px !important;
+  z-index: 1;
+}
+
+.slick-next {
+  right: 10px !important;
+  z-index: 1;
+}
+
+.slick-prev:before, .slick-next:before {
+  font-size: 20px;
+  color: darkgreen !important;
+}
+.slick-dots {
+  bottom: -50px !important;
 }
