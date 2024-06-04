@@ -11,14 +11,20 @@ export const Carrouselproducts = () => {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 4,
+    slidesToShow: 6,
     slidesToScroll: 1,
-    autoplay: false,
-    autoplaySpeed: 2500,
+    autoplay: true,
+    autoplaySpeed: 3000,
     arrows: false,
     responsive: [
       {
         breakpoint: 1200,
+        settings: {
+          slidesToShow: 6,
+        },
+      },
+      {
+        breakpoint: 1024,
         settings: {
           slidesToShow: 4,
         },
@@ -39,7 +45,7 @@ export const Carrouselproducts = () => {
   };
 
   return (
-    <Box sx={{  margin: '60px auto ', textAlign:'center', maxWidth:1000}}>
+    <Box sx={{  margin: '90px auto ', textAlign:'center', maxWidth:1400}}>
       <Slider {...settings}>
         {products.map((product, index) => (
           <Box sx={{ margin: '0px auto ', maxWidth:220 }}>

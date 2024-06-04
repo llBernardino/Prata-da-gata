@@ -1,6 +1,6 @@
 import React from 'react';
 import Col from 'react-bootstrap/Col';
-import pontos from '../../img/3pontos.png';
+import pontos from '../../img/3pontoswhite.png';
 import {
   Card, Title, Image, Figure, Caption, Image1, BackgroundPratas, Descript, ValueDescript, ValueText, PureText, Icon, Iconpoints, Boxtext
 } from './style.js';

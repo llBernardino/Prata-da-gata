@@ -6,7 +6,7 @@ export const Image = styled.img`
 
 export const CarrinhoText = styled.p`
 margin:0px;
-color:#7a7a7a;
+color:white;
  
 `
 export const Figure = styled.figure`
@@ -17,6 +17,6 @@ export const Figure = styled.figure`
 `
 export const Line = styled.hr`
 margin:3px 0px;
-margin-top:9px;
-color:#000000;
+color:white;
+opacity: 1;
 `

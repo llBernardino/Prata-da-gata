@@ -8,7 +8,7 @@ export const SearchBar = ({ onSearch }) => {
 
   return (
     <>
-        <TextField id="outlined-basic searchbar" label="Pesquisar" type="text" onChange={handleInputChange}  variant="outlined" color="success" sx={{ width: "100%" , margin:'15px 0px' }}/>
+        <TextField id="outlined-basic searchbar" label="Pesquisar" type="text" onChange={handleInputChange}  variant="outlined" color="success" sx={{ width: "100%" , margin:'15px 0px', borderColor:'#000000'}}/>
     </>
     
   );
