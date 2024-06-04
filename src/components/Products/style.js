@@ -3,7 +3,7 @@ import styled from '@emotion/styled'
 import backgroundprodutos from '../../img/backgroundprodutos.jpg'
 const background = () => `url('${backgroundprodutos}')`
 export const Content = styled.div`
-
+    pa
 `
 export const BackgroundPratas = styled.div`
   background: no-repeat;
@@ -11,6 +11,7 @@ export const BackgroundPratas = styled.div`
   background-position: center;
   height:175px;
   border-radius:10px 10px 0px 0px;
+  
 `
 export const Image1 = styled.img`
   height: 100%;
@@ -19,9 +20,10 @@ export const Image1 = styled.img`
 `
 
 export const Backgroundproducts = styled.div`
-background-color:white;
+    background-color:white;
     display: flex;
     justify-content: center;
+    padding:100px 0px;
 `
 export const H1 = styled.h2`
   color:#024302;

@@ -51,3 +51,31 @@
     display: flex !important;
   }
 }
+
+/* carousel.css */
+.slick-prev, .slick-next {
+  width: 30px;
+  height: 30px;
+  z-index: 1;
+}
+
+.slick-prev {
+  left: 10px !important;
+  z-index: 1;
+}
+
+.slick-next {
+  right: 10px !important;
+  z-index: 1;
+}
+
+.slick-prev:before, .slick-next:before {
+  font-size: 20px;
+  color: darkgreen !important;
+}
+.slick-dots {
+ 
+  bottom: -50px !important;
+ 
+  
+}

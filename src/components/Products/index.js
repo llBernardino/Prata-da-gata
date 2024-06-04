@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Row from 'react-bootstrap/Row';
 import { Content, Backgroundproducts, Container, H1,Title2 } from './style.js';
-import { Col1 } from './col1.js';
+import {  Col1 } from './col1.js';
 import {Box} from '@mui/material';
 import {SearchBar} from '../../Search/searchbar.js';
 import { products } from '../../productsdata/productsData.js';// Importa os dados dos produtos

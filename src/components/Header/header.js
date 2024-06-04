@@ -7,7 +7,7 @@ import {
   Toolbar,
   useMediaQuery,
 } from "@mui/material";
-import {Image,CarrinhoText,Figure} from './style'
+import {Image,CarrinhoText,Figure,Line} from './style'
 import logoheader from '../../img/logoprata5.png';
 import {DrawerComp} from "./drawer";
 import { ThemeProvider } from '@mui/material/styles';
@@ -46,7 +46,7 @@ export const Headerr = () => {
                 </CarrinhoText>
               </Box>
             </Box>
-           
+            <Line/>
               {isMatch ? (
                 <>
                   <DrawerComp />

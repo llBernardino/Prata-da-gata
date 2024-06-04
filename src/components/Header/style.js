@@ -15,3 +15,8 @@ export const Figure = styled.figure`
  margin:0px;
  padding-right: 21px;
 `
+export const Line = styled.hr`
+margin:3px 0px;
+margin-top:9px;
+color:#000000;
+`
