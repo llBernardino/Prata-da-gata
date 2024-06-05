@@ -12,7 +12,7 @@ export const Hero = () => {
       <ThemeProvider theme={theme}>
         <BackgroundHero>
             <Container>
-              <H1 className="text-center">PRATA DA GATA</H1>
+              <H1 className="text-center">A PRATA DA GATA</H1>
               <Box display="flex" flexWrap= 'wrap' gap={2} justifyContent='start' >
                 <Box my={4} display='flex' alignItems='start' p={2} flexDirection = 'column'  justifyContent='center' maxWidth={652} className='select'>
                   <Title>Bem-vindo à prata da gata, onde a sofisticação encontra o brilho da prata!</Title>
