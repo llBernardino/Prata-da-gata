@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, forwardRef } from 'react';
 import Row from 'react-bootstrap/Row';
-import { Content, Backgroundproducts, Container, H1,Title2 } from './style.js';
-import {  Col1 } from './col1.js';
-import {Box} from '@mui/material';
-import {SearchBar} from '../../Search/searchbar.js';
-import { products } from '../../productsdata/productsData.js';// Importa os dados dos produtos
-import stringSimilarity from 'string-similarity'; 
+import { Content, Backgroundproducts, Container, H1, Title2 } from './style.js';
+import { Col1 } from './col1.js';
+import { Box } from '@mui/material';
+import { SearchBar } from '../../Search/searchbar.js';
+import { products } from '../../productsdata/productsData.js'; // Importa os dados dos produtos
+import stringSimilarity from 'string-similarity';
 
-export const Products = () => {
+const Products = forwardRef((props, ref) => {
   const [searchInput, setSearchInput] = useState('');
 
   const handleSearch = (value) => {
@@ -30,10 +30,10 @@ export const Products = () => {
 
   return (
     <Content>
-      <Backgroundproducts>
+      <Backgroundproducts ref={ref}>
         <Container>
           <H1 className="text-center">NOVIDADES! COMPRE JÁ:</H1>
-          <Box sx={{maxWidth:800, width:'100%', padding:'0px 20px'}}>
+          <Box sx={{ maxWidth: 800, width: '100%', padding: '0px 20px' }}>
             <SearchBar onSearch={handleSearch} /> {/* Adicione a barra de pesquisa */}
           </Box>
           <Row className="justify-content-center d-flex w-100">
@@ -51,7 +51,7 @@ export const Products = () => {
                 />
               ))
             ) : (
-              <Box display="flex" justifyContent='center' alignItems={'center'} sx={{ padding:'50px', minHeight:400 }}>
+              <Box display="flex" justifyContent="center" alignItems={'center'} sx={{ padding: '50px', minHeight: 400 }}>
                 <Box>
                   <Title2>Esse produto ainda não se encontra em nossa loja.</Title2>
                 </Box>
@@ -62,4 +62,6 @@ export const Products = () => {
       </Backgroundproducts>
     </Content>
   );
-};
+});
+
+export default Products;

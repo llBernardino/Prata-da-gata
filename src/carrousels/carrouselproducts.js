@@ -45,7 +45,7 @@ export const Carrouselproducts = () => {
   };
 
   return (
-    <Box sx={{  margin: '90px auto ', textAlign:'center', maxWidth:1400}}>
+    <Box sx={{  margin: '90px auto ', textAlign:'center', maxWidth:1400 ,padding:'30px 0px'}}>
       <Slider {...settings}>
         {products.map((product, index) => (
           <Box sx={{ margin: '0px auto ', maxWidth:220 }}>

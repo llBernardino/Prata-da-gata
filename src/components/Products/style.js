@@ -1,9 +1,8 @@
 
 import styled from '@emotion/styled'
-import backgroundprodutos from '../../img/backgroundprodutos.jpg'
-const background = () => `url('${backgroundprodutos}')`
+
 export const Content = styled.div`
-    pa
+ 
 `
 export const BackgroundPratas = styled.div`
   background: no-repeat;
@@ -23,11 +22,12 @@ export const Backgroundproducts = styled.div`
     background-color:white;
     display: flex;
     justify-content: center;
-    padding:100px 0px;
+    padding:30px 0px;
 `
 export const H1 = styled.h2`
   color:#024302;
   padding: 33px 0px;
+  padding-top: 55px;
   font-family: auto;
   letter-spacing: 10px;
   font-size: 55px;
@@ -42,7 +42,7 @@ export  const Container = styled.div`
   display: flex;
   align-items: center;
   flex-direction:column;
-
+ 
 `
 export const Card = styled.article`
   width: 220px;

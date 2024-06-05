@@ -37,7 +37,7 @@ export const Carrouselprom = () => {
   };
 
   return (
-    <Box sx={{  margin: '0 auto', textAlign:'center'}}>
+    <Box sx={{  margin: '0 auto', textAlign:'center', paddingBottom:'30px'}}>
       <Slider {...settings}>
         {imagesprom.map((image, index) => (
           <Box key={index} component="img" sx={{ maxWidth: '500px !important', height: 'auto' , textAlign:'center' }} src={image.imgPath} alt={`Image ${index}`} />
