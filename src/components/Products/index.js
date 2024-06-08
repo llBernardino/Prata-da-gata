@@ -1,31 +1,46 @@
-import React, { useState, forwardRef } from 'react';
+// src/components/Products.js
+
+import React, { useState, useEffect, forwardRef } from 'react';
+import axios from 'axios';
 import Row from 'react-bootstrap/Row';
 import { Content, Backgroundproducts, Container, H1, Title2 } from './stylehomeprod.js';
 import { CardProduct } from './CardProduct.js';
 import { Box } from '@mui/material';
 import { SearchBar } from '../../Search/searchbar.js';
-import { products } from '../../productsdata/productsData.js'; // Importa os dados dos produtos
 import stringSimilarity from 'string-similarity';
+
+const BASE_URL = process.env.REACT_APP_BACKEND_URL;
 
 export const Products = forwardRef((props, ref) => {
   const [searchInput, setSearchInput] = useState('');
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const response = await axios.get(`${BASE_URL}/products`);
+        setProducts(response.data);
+      } catch (error) {
+        console.error('Erro ao buscar produtos:', error);
+      }
+    };
+
+    fetchProducts();
+  }, []);
 
   const handleSearch = (value) => {
     setSearchInput(value.toLowerCase());
   };
 
-  // Filtrar produtos que correspondem diretamente ao termo de busca
   const directMatches = products.filter((product) =>
     product.title.toLowerCase().includes(searchInput)
   );
 
-  // Filtrar produtos que têm uma similaridade com o termo de busca
   const similarMatches = products.filter((product) =>
     !directMatches.includes(product) &&
     stringSimilarity.compareTwoStrings(product.title.toLowerCase(), searchInput) > 0.3
   );
 
-  // Combinar ambos os arrays, com directMatches primeiro
   const combinedProducts = [...directMatches, ...similarMatches];
 
   return (
@@ -34,7 +49,7 @@ export const Products = forwardRef((props, ref) => {
         <Container>
           <H1 className="text-center">NOVIDADES! COMPRE JÁ:</H1>
           <Box sx={{ maxWidth: 800, width: '100%', padding: '0px 20px' }}>
-            <SearchBar onSearch={handleSearch} /> {/* Adicione a barra de pesquisa */}
+            <SearchBar onSearch={handleSearch} />
           </Box>
           <Row className="justify-content-center d-flex w-100">
             {combinedProducts.length > 0 ? (
@@ -44,9 +59,9 @@ export const Products = forwardRef((props, ref) => {
                   className="justify-content-center d-flex w-100 products"
                   title={product.title}
                   descript={product.descript}
-                  image={product.image}
+                  image={`${BASE_URL}${product.image}`}
                   value={product.value}
-                  imagem={product.imagem}
+                  imagem={`${BASE_URL}${product.imagem}`}
                   linkwhats={product.linkwhats}
                 />
               ))
@@ -63,5 +78,4 @@ export const Products = forwardRef((props, ref) => {
     </Content>
   );
 });
-
-
+console.log('Backend URL:', BASE_URL);

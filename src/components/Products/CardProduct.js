@@ -11,7 +11,7 @@ export const CardProduct = (props) => {
       <Card>
         <a href={props.linkwhats} target="_blank" rel="noopener noreferrer">
           <BackgroundPratas>
-            <Image1 src={props.imagem} alt='React' />
+            <Image1 src={props.imagem} alt='Prata' />
           </BackgroundPratas>
         </a>
         <Caption>
@@ -19,7 +19,7 @@ export const CardProduct = (props) => {
           <Descript>{props.descript}</Descript>
           <ValueDescript>
             <Figure>
-              <Image src={props.image} width={40} height={40} />
+              <Image src={props.image} width={40} height={40} alt='Prata' />
               <Boxtext>
                 <ValueText>R$ {props.value},00</ValueText>
                 <PureText>Prata 925.</PureText>
