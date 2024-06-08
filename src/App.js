@@ -1,25 +1,14 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Products from './components/Products/index.js';
-import {Headerr} from './components/Header/header.js';
-import Hero from './components/Hero/index.js';
-import {Carrouselprom} from './carrousels/carrouselprom.js'
-import {Carrouselproducts} from './carrousels/carrouselproducts.js'
-
-function App() {
-
-  const catalogRef = useRef(null);
-
+import { BrowserRouter } from 'react-router-dom';
+import { AppRoutes } from './routes';
+import { Headerr } from './components/Header/header';
+export const App = () => {
   return (
-    <div className="App">
+    <BrowserRouter>
+      <AppRoutes />
       <Headerr/>
-      <Hero catalogRef={catalogRef}/>
-      <Carrouselprom/>
-      <Carrouselproducts/>
-      <Products ref={catalogRef} />
-    </div>
+    </BrowserRouter>
   );
-}
-
-export default App;
+};

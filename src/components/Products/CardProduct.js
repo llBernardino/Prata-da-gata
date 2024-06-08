@@ -3,9 +3,9 @@ import Col from 'react-bootstrap/Col';
 import pontos from '../../img/3pontoswhite.png';
 import {
   Card, Title, Image, Figure, Caption, Image1, BackgroundPratas, Descript, ValueDescript, ValueText, PureText, Icon, Iconpoints, Boxtext
-} from './style.js';
+} from './stylehomeprod.js';
 
-export const Col1 = (props) => {
+export const CardProduct = (props) => {
   return (
     <Col lg={3} md={6} sm={12} className="justify-content-center d-flex my-5">
       <Card>
@@ -21,7 +21,7 @@ export const Col1 = (props) => {
             <Figure>
               <Image src={props.image} width={40} height={40} />
               <Boxtext>
-                <ValueText>{props.value}</ValueText>
+                <ValueText>R$ {props.value},00</ValueText>
                 <PureText>Prata 925.</PureText>
               </Boxtext>
             </Figure>

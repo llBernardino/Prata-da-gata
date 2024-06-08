@@ -54,15 +54,15 @@ export const Headerr = () => {
               ) : (
               <>
                 <Tabs sx={{ padding: "0px auto", color:'white'}} indicatorColor="secondary" textColor="secondary" value={value} onChange={(e, value) => setValue(value)}>
-                  <Tab component={Link} to='/Hero' sx={{ fontWeight: '600', fontSize: '12px', fontFamily: '"Roboto", Sans-serif', color: '#ffffff' }} label="Home"/>
-                  <Tab component={Link} to='/Products' sx={{ fontWeight: '600', fontSize: '12px', fontFamily: '"Roboto", Sans-serif', color: '#ffffff' }} label="Produtos" />
-                  <Tab component={Link} to='/About' sx={{ fontWeight: '600', fontSize: '12px', fontFamily: '"Roboto", Sans-serif', color: '#ffffff' }} label="Anéis" />
-                  <Tab component={Link} to='/Services' sx={{ fontWeight: '600', fontSize: '12px', fontFamily: '"Roboto", Sans-serif', color: '#ffffff' }} label="Brincos" />
-                  <Tab component={Link} to='/Services' sx={{ fontWeight: '600', fontSize: '12px', fontFamily: '"Roboto", Sans-serif', color: '#ffffff' }} label="Pulseiras" />
-                  <Tab component={Link} to='/Services' sx={{ fontWeight: '600', fontSize: '12px', fontFamily: '"Roboto", Sans-serif', color: '#ffffff' }} label="Colares"/>
-                  <Tab component={Link} to='/Services' sx={{ fontWeight: '600', fontSize: '12px', fontFamily: '"Roboto", Sans-serif', color: '#ffffff' }} label="Conjuntos"/>
-                  <Tab component={Link} to='/Services' sx={{ fontWeight: '600', fontSize: '12px', fontFamily: '"Roboto", Sans-serif', color: '#ffffff' }} label="Coleções"/>
-                  <Tab component={Link} to='/Contact' sx={{ fontWeight: '600', fontSize: '12px', fontFamily: '"Roboto", Sans-serif', color: '#ffffff' }} label="Contato" />
+                  <Tab component={Link} to='/Home' sx={{ fontWeight: '600', fontSize: '12px', fontFamily: '"Roboto", Sans-serif', color: '#ffffff' }} label="Home"/>
+                  <Tab component={Link} to='/Produtos' sx={{ fontWeight: '600', fontSize: '12px', fontFamily: '"Roboto", Sans-serif', color: '#ffffff' }} label="Produtos" />
+                  <Tab component={Link} to='/Anéis' sx={{ fontWeight: '600', fontSize: '12px', fontFamily: '"Roboto", Sans-serif', color: '#ffffff' }} label="Anéis" />
+                  <Tab component={Link} to='/Brincos' sx={{ fontWeight: '600', fontSize: '12px', fontFamily: '"Roboto", Sans-serif', color: '#ffffff' }} label="Brincos" />
+                  <Tab component={Link} to='/Pulseiras' sx={{ fontWeight: '600', fontSize: '12px', fontFamily: '"Roboto", Sans-serif', color: '#ffffff' }} label="Pulseiras" />
+                  <Tab component={Link} to='/Colares' sx={{ fontWeight: '600', fontSize: '12px', fontFamily: '"Roboto", Sans-serif', color: '#ffffff' }} label="Colares"/>
+                  <Tab component={Link} to='/Conjuntos' sx={{ fontWeight: '600', fontSize: '12px', fontFamily: '"Roboto", Sans-serif', color: '#ffffff' }} label="Conjuntos"/>
+                  <Tab component={Link} to='/Coleções' sx={{ fontWeight: '600', fontSize: '12px', fontFamily: '"Roboto", Sans-serif', color: '#ffffff' }} label="Coleções"/>
+                  <Tab component={Link} to='/Contato' sx={{ fontWeight: '600', fontSize: '12px', fontFamily: '"Roboto", Sans-serif', color: '#ffffff' }} label="Contato" />
                 </Tabs>
               </>
             )}

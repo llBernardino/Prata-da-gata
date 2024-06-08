@@ -13,7 +13,7 @@ const scrollToSection = (ref) => {
   }
 };
 
-const Hero = ({ catalogRef }) => {
+export  const Hero = ({ catalogRef }) => {
   return (
     <Content>
       <ThemeProvider theme={theme}>
@@ -34,4 +34,4 @@ const Hero = ({ catalogRef }) => {
   );
 };
 
-export default Hero;
+

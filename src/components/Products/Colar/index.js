@@ -1,26 +1,29 @@
 import React, { useState, forwardRef } from 'react';
 import Row from 'react-bootstrap/Row';
-import { Content, Backgroundproducts, Container, H1, Title2 } from './stylehomeprod.js';
-import { CardProduct } from './CardProduct.js';
+import { Content, Backgroundproducts, Container, H1, Title2 } from '../stylehomeprod.js';
+import { CardProduct } from '../CardProduct.js'; 
 import { Box } from '@mui/material';
-import { SearchBar } from '../../Search/searchbar.js';
-import { products } from '../../productsdata/productsData.js'; // Importa os dados dos produtos
+import { SearchBar } from '../../../Search/searchbar.js';
+import { products } from '../../../productsdata/productsData.js'; // Importa os dados dos produtos
 import stringSimilarity from 'string-similarity';
 
-export const Products = forwardRef((props, ref) => {
+export const Colares = forwardRef((props, ref) => {
   const [searchInput, setSearchInput] = useState('');
 
   const handleSearch = (value) => {
     setSearchInput(value.toLowerCase());
   };
 
+  // Filtrar produtos do tipo 'colar'
+  const colarProducts = products.filter(product => product.type.toLowerCase() === 'colar');
+
   // Filtrar produtos que correspondem diretamente ao termo de busca
-  const directMatches = products.filter((product) =>
+  const directMatches = colarProducts.filter((product) =>
     product.title.toLowerCase().includes(searchInput)
   );
 
   // Filtrar produtos que têm uma similaridade com o termo de busca
-  const similarMatches = products.filter((product) =>
+  const similarMatches = colarProducts.filter((product) =>
     !directMatches.includes(product) &&
     stringSimilarity.compareTwoStrings(product.title.toLowerCase(), searchInput) > 0.3
   );
@@ -29,10 +32,10 @@ export const Products = forwardRef((props, ref) => {
   const combinedProducts = [...directMatches, ...similarMatches];
 
   return (
-    <Content>
+    <Content className='mt-5 pt-5'>
       <Backgroundproducts ref={ref}>
         <Container>
-          <H1 className="text-center">NOVIDADES! COMPRE JÁ:</H1>
+          <H1 className="text-center">NOVIDADES! COMPRE JÁ - Colares:</H1>
           <Box sx={{ maxWidth: 800, width: '100%', padding: '0px 20px' }}>
             <SearchBar onSearch={handleSearch} /> {/* Adicione a barra de pesquisa */}
           </Box>
@@ -63,5 +66,3 @@ export const Products = forwardRef((props, ref) => {
     </Content>
   );
 });
-
-
