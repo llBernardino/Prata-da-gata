@@ -51,6 +51,42 @@ const products = [
     linkwhats: 'https://wa.me/558599623339?text=Bom%20dia!%20Estou%20interessado(a)%20no%20Brinco%20de%20Bolinha.',
     type: 'Brinco',
   },
+  {
+    title: 'Pulseira Bolinha',
+    descript: 'Pulseira de Prata 925.',
+    image: '/static/img/logopratacard.png',
+    value: 55,
+    imagem: '/static/img/pulseiraa.jpg',
+    linkwhats: 'https://wa.me/558599623339?text=Bom%20dia!%20Estou%20interessado(a)%20na%20Pulseira%20de%20Bolinha.',
+    type: 'Pulseira',
+  },
+  {
+    title: 'Anel Bolinha',
+    descript: 'Anel de Prata 925.',
+    image: '/static/img/logopratacard.png',
+    value: 55,
+    imagem: '/static/img/pulseiraa.jpg',
+    linkwhats: 'https://wa.me/558599623339?text=Bom%20dia!%20Estou%20interessado(a)%20no%20Anel%20de%20Bolinha.',
+    type: 'Anel',
+  },
+  {
+    title: 'Colar Bolinha',
+    descript: 'Colar de Prata 925.',
+    image: '/static/img/logopratacard.png',
+    value: 55,
+    imagem: '/static/img/pulseiraa.jpg',
+    linkwhats: 'https://wa.me/558599623339?text=Bom%20dia!%20Estou%20interessado(a)%20no%20Colar%20de%20Bolinha.',
+    type: 'Colar',
+  },
+  {
+    title: 'Brinco Bolinha',
+    descript: 'Brinco de Prata 925.',
+    image: '/static/img/logopratacard.png',
+    value: 55,
+    imagem: '/static/img/pulseiraa.jpg',
+    linkwhats: 'https://wa.me/558599623339?text=Bom%20dia!%20Estou%20interessado(a)%20no%20Brinco%20de%20Bolinha.',
+    type: 'Brinco',
+  },
 ];
 
 app.get('/products', (req, res) => {

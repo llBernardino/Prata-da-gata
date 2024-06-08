@@ -1,14 +1,30 @@
-import React, { useState, forwardRef } from 'react';
+import React, { useState, useEffect, forwardRef } from 'react';
+import axios from 'axios';
 import Row from 'react-bootstrap/Row';
 import { Content, Backgroundproducts, Container, H1, Title2 } from '../stylehomeprod.js';
 import { CardProduct } from '../CardProduct.js'; 
 import { Box } from '@mui/material';
 import { SearchBar } from '../../../Search/searchbar.js';
-import { products } from '../../../productsdata/productsData.js'; // Importa os dados dos produtos
 import stringSimilarity from 'string-similarity';
+
+const BASE_URL = process.env.REACT_APP_BACKEND_URL;
 
 export const Colares = forwardRef((props, ref) => {
   const [searchInput, setSearchInput] = useState('');
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const response = await axios.get(`${BASE_URL}/products`);
+        setProducts(response.data);
+      } catch (error) {
+        console.error('Erro ao buscar produtos:', error);
+      }
+    };
+
+    fetchProducts();
+  }, []);
 
   const handleSearch = (value) => {
     setSearchInput(value.toLowerCase());
@@ -47,9 +63,9 @@ export const Colares = forwardRef((props, ref) => {
                   className="justify-content-center d-flex w-100 products"
                   title={product.title}
                   descript={product.descript}
-                  image={product.image}
+                  image={`${BASE_URL}${product.image}`}
                   value={product.value}
-                  imagem={product.imagem}
+                  imagem={`${BASE_URL}${product.imagem}`}
                   linkwhats={product.linkwhats}
                 />
               ))
