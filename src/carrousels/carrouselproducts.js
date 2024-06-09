@@ -1,12 +1,31 @@
-import React from 'react';
+import React, { useState, useEffect, forwardRef } from 'react';
+import axios from 'axios';
 import Slider from 'react-slick';
 import Box from '@mui/material/Box';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Row from 'react-bootstrap/Row';
-import { products } from '../productsdata/productsData.js';
 import { Cardproducts } from '../components/Cards/cardcarrousel';
+
+const BASE_URL = process.env.REACT_APP_BACKEND_URL;
+
+
 export const Carrouselproducts = () => {
+  
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const response = await axios.get(`${BASE_URL}/products`);
+        setProducts(response.data);
+      } catch (error) {
+        console.error('Erro ao buscar produtos:', error);
+      }
+    };
+
+    fetchProducts();
+  }, []);
+
   const settings = {
     dots: true,
     infinite: true,
@@ -45,7 +64,7 @@ export const Carrouselproducts = () => {
   };
 
   return (
-    <Box sx={{  margin: '90px auto ', textAlign:'center', maxWidth:1400}}>
+    <Box sx={{  margin: '90px auto ', textAlign:'center', maxWidth:1400 ,padding:'30px 0px'}}>
       <Slider {...settings}>
         {products.map((product, index) => (
           <Box sx={{ margin: '0px auto ', maxWidth:220 }}>
@@ -53,9 +72,9 @@ export const Carrouselproducts = () => {
               key={index}
               title={product.title}
               descript={product.descript}
-              image={product.image}
+              image={`${BASE_URL}${product.image}`}
               value={product.value}
-              imagem={product.imagem}
+              imagem={`${BASE_URL}${product.imagem}`}
               linkwhats={product.linkwhats}
             />
           </Box>
