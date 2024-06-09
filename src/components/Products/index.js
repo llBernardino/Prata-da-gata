@@ -1,5 +1,4 @@
 // src/components/Products.js
-
 import React, { useState, useEffect, forwardRef } from 'react';
 import axios from 'axios';
 import Row from 'react-bootstrap/Row';
@@ -53,9 +52,9 @@ export const Products = forwardRef((props, ref) => {
           </Box>
           <Row className="justify-content-center d-flex w-100">
             {combinedProducts.length > 0 ? (
-              combinedProducts.map((product, index) => (
+              combinedProducts.map((product) => (
                 <CardProduct
-                  key={index}
+                  key={product.id}
                   className="justify-content-center d-flex w-100 products"
                   title={product.title}
                   descript={product.descript}
