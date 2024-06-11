@@ -8,7 +8,7 @@ const BASE_URL = process.env.REACT_APP_BACKEND_URL;
 
 export const Cart = () => {
   const { cartItems } = useContext(CartContext);
-
+ 
   return (
     <div>
       <h2>Seu Carrinho</h2>
@@ -25,6 +25,7 @@ export const Cart = () => {
               image={`${BASE_URL}${product.image}`}
               value={product.value}
               imagem={`${BASE_URL}${product.imagem}`}
+              
               />
             ))}
           </Row>

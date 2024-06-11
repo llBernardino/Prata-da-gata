@@ -6,7 +6,7 @@ import {
   Card, Title, Image, Figure, Caption, Image1, BackgroundPratas, Descript, ValueDescript, ValueText, PureText, Icon, Boxtext
 } from './stylehomeprod.js';
 
-export const CardProduct = ({ title, descript, image, value, imagem, linkwhats, onAddToCart }) => {
+export const CardProduct = ({ title, descript, image, value, imagem,onAddToCart }) => {
   return (
     <Col lg={3} md={6} sm={12} className="justify-content-center d-flex my-5">
       <Card>

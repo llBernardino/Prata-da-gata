@@ -30,9 +30,11 @@ export const Headerr = () => {
               <Box sx={{maxWidth:223}}>
                 <SearchBarhead />
               </Box>
-              <Figure>
-                <Image alt="Prata da gata" src={logoheader} width={110} height='auto' />
-              </Figure>
+              <Link to='/Home' sx={{TextDecoder:'none'}}>
+                <Figure >
+                  <Image alt="Prata da gata" src={logoheader} width={110} height='auto' />
+                </Figure>
+              </Link>
               <Box sx={{display:"flex", justifyContent:"space-around", maxWidth:223, width:'100%'}}>
                 <Link to="/cart">
                   <CarrinhoText>
