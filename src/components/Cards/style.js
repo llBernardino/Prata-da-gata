@@ -34,7 +34,7 @@ export const Image = styled.img`
   margin:0px 4px;
 `
 export const Caption = styled.div`
-  padding: 10px 15px;
+  padding: 10px 12px;
   padding-top: 15px;
   
 `

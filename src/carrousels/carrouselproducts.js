@@ -4,7 +4,7 @@ import Slider from 'react-slick';
 import Box from '@mui/material/Box';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { Cardproducts } from '../components/Cards/cardcarrousel';
+import { CardProductsCarrousel } from '../components/Cards/cardcarrousel';
 
 const BASE_URL = process.env.REACT_APP_BACKEND_URL;
 
@@ -68,7 +68,7 @@ export const Carrouselproducts = () => {
       <Slider {...settings}>
         {products.map((product, index) => (
           <Box sx={{ margin: '0px auto ', maxWidth:220 }}>
-            <Cardproducts 
+            <CardProductsCarrousel
               key={index}
               title={product.title}
               descript={product.descript}

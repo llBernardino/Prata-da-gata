@@ -34,11 +34,13 @@ export const Headerr = () => {
                 <Image alt="Prata da gata" src={logoheader} width={110} height='auto' />
               </Figure>
               <Box sx={{display:"flex", justifyContent:"space-around", maxWidth:223, width:'100%'}}>
-                <CarrinhoText>
-                  <AddShoppingCartIcon sx={{margin:'0px 5px'}}/>
-                  <br></br>
-                  Meu Carrinho
-                </CarrinhoText>
+                <Link to="/cart">
+                  <CarrinhoText>
+                    <AddShoppingCartIcon sx={{margin:'0px 5px'}}/>
+                    <br></br>
+                    Meu Carrinho
+                  </CarrinhoText>
+                </Link>
                 <CarrinhoText>
                   <CallIcon sx={{margin:'0px 5px'}}/>
                   <br></br>

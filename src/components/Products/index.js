@@ -1,5 +1,4 @@
-// src/components/Products.js
-import React, { useState, useEffect, forwardRef } from 'react';
+import React, { useState, useEffect, forwardRef, useContext } from 'react';
 import axios from 'axios';
 import Row from 'react-bootstrap/Row';
 import { Content, Backgroundproducts, Container, H1, Title2 } from './stylehomeprod.js';
@@ -7,12 +6,14 @@ import { CardProduct } from './CardProduct.js';
 import { Box } from '@mui/material';
 import { SearchBar } from '../../Search/searchbar.js';
 import stringSimilarity from 'string-similarity';
+import { CartContext } from '../../context/CartContext'; // Certifique-se de importar seu contexto de carrinho
 
 const BASE_URL = process.env.REACT_APP_BACKEND_URL;
 
 export const Products = forwardRef((props, ref) => {
   const [searchInput, setSearchInput] = useState('');
   const [products, setProducts] = useState([]);
+  const { addToCart } = useContext(CartContext);
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -54,14 +55,13 @@ export const Products = forwardRef((props, ref) => {
             {combinedProducts.length > 0 ? (
               combinedProducts.map((product) => (
                 <CardProduct
-                  key={product.id}
-                  className="justify-content-center d-flex w-100 products"
+                  key={product.id} // Certifique-se de que cada produto tenha um id único
                   title={product.title}
                   descript={product.descript}
                   image={`${BASE_URL}${product.image}`}
                   value={product.value}
                   imagem={`${BASE_URL}${product.imagem}`}
-                  linkwhats={product.linkwhats}
+                  onAddToCart={() => addToCart(product)} // Passar a função onAddToCart como prop
                 />
               ))
             ) : (
@@ -77,4 +77,3 @@ export const Products = forwardRef((props, ref) => {
     </Content>
   );
 });
-console.log('Backend URL:', BASE_URL);
