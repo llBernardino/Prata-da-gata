@@ -34,9 +34,9 @@ body:after {
   }
 }
 .css-heg063-MuiTabs-flexContainer {
-  justify-content: center;
-  display: flex;
-  flex-wrap: wrap;
+  justify-content: center !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
 }
 
 
