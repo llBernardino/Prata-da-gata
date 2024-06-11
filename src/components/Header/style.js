@@ -7,7 +7,7 @@ export const Image = styled.img`
 export const CarrinhoText = styled.p`
 margin:0px;
 color:white;
-    text-decoration: none;
+text-decoration: none;
  
 `
 export const Figure = styled.figure`

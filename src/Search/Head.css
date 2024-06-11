@@ -2,3 +2,6 @@
 .css-1occrge-MuiFormLabel-root-MuiInputLabel-root {
   color: white !important;
 }
+label[data-shrink=false]+.MuiInputBase-formControl .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {
+  color: white !important;
+}
