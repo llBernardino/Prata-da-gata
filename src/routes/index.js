@@ -6,6 +6,7 @@ import { Pulseiras } from '../components/Products/Pulseiras/index.js';
 import { Aneis } from '../components/Products/Aneis/index.js';
 import { Brincos } from '../components/Products/Brinco/index.js';
 import { Colares } from '../components/Products/Colar/index.js';
+import { Cart } from '../components/Cart/cart.js';
 export const AppRoutes = () => {
 
   return (
@@ -18,6 +19,7 @@ export const AppRoutes = () => {
       <Route path="/Anéis" element={<Aneis/>} />
       <Route path="/Brincos" element={<Brincos/>} />
       <Route path="/Colares" element={<Colares/>} />
+      <Route path="/cart" element={<Cart />} /> 
       {/* <Route path="/Conjuntos" element={<Conjuntos/>} />
       <Route path="/Coleções" element={<Coleçoes/>} />
       <Route path="/Contato" element={<Contato/>} /> */}

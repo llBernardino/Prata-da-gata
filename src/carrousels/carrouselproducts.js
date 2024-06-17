@@ -1,16 +1,17 @@
-import React, { useState, useEffect, forwardRef } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import axios from 'axios';
 import Slider from 'react-slick';
 import Box from '@mui/material/Box';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { Cardproducts } from '../components/Cards/cardcarrousel';
-
+import { CardProductsCarrousel } from '../components/Cards/cardcarrousel';
+import { CartContext } from '../context/CartContext';
 const BASE_URL = process.env.REACT_APP_BACKEND_URL;
 
 
 export const Carrouselproducts = () => {
-  
+  const { addToCart } = useContext(CartContext);
+ 
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -68,14 +69,14 @@ export const Carrouselproducts = () => {
       <Slider {...settings}>
         {products.map((product, index) => (
           <Box sx={{ margin: '0px auto ', maxWidth:220 }}>
-            <Cardproducts 
+            <CardProductsCarrousel
               key={index}
               title={product.title}
               descript={product.descript}
               image={`${BASE_URL}${product.image}`}
               value={product.value}
               imagem={`${BASE_URL}${product.imagem}`}
-              linkwhats={product.linkwhats}
+              onAddToCart={() => addToCart(product)}
             />
           </Box>
         ))}

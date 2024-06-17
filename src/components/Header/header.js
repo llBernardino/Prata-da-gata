@@ -30,15 +30,19 @@ export const Headerr = () => {
               <Box sx={{maxWidth:223}}>
                 <SearchBarhead />
               </Box>
-              <Figure>
-                <Image alt="Prata da gata" src={logoheader} width={110} height='auto' />
-              </Figure>
+              <Link to='/Home'>
+                <Figure >
+                  <Image alt="Prata da gata" src={logoheader} width={110} height='auto' />
+                </Figure>
+              </Link>
               <Box sx={{display:"flex", justifyContent:"space-around", maxWidth:223, width:'100%'}}>
-                <CarrinhoText>
-                  <AddShoppingCartIcon sx={{margin:'0px 5px'}}/>
-                  <br></br>
-                  Meu Carrinho
-                </CarrinhoText>
+                <Link to="/cart">
+                  <CarrinhoText>
+                    <AddShoppingCartIcon sx={{margin:'0px 5px'}}/>
+                    <br></br>
+                    Meu Carrinho
+                  </CarrinhoText>
+                </Link>
                 <CarrinhoText>
                   <CallIcon sx={{margin:'0px 5px'}}/>
                   <br></br>
@@ -53,7 +57,7 @@ export const Headerr = () => {
                 </>
               ) : (
               <>
-                <Tabs sx={{ padding: "0px auto", color:'white'}} indicatorColor="secondary" textColor="secondary" value={value} onChange={(e, value) => setValue(value)}>
+                <Tabs sx={{ padding: "0px auto", color:'white', display:'flex', justifyContent:"center", flexWrap:"wrap"}} indicatorColor="secondary" textColor="secondary" value={value} onChange={(e, value) => setValue(value)}>
                   <Tab component={Link} to='/Home' sx={{ fontWeight: '600', fontSize: '12px', fontFamily: '"Roboto", Sans-serif', color: '#ffffff' }} label="Home"/>
                   <Tab component={Link} to='/Produtos' sx={{ fontWeight: '600', fontSize: '12px', fontFamily: '"Roboto", Sans-serif', color: '#ffffff' }} label="Produtos" />
                   <Tab component={Link} to='/Anéis' sx={{ fontWeight: '600', fontSize: '12px', fontFamily: '"Roboto", Sans-serif', color: '#ffffff' }} label="Anéis" />

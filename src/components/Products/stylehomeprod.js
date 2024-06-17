@@ -55,7 +55,6 @@ export const Card = styled.article`
 export const Figure = styled.figure`
   text-align:start;
   margin:0px;
-  margin-top:4px;
   display:flex;
   
 `
@@ -85,15 +84,10 @@ export const Image = styled.img`
   
 `
 export const Caption = styled.div`
-  padding: 10px 15px;
+  padding: 10px 12px;
   padding-top: 15px;
 `
-export const Icon = styled.div`
- 
-`
-export const Iconpoints = styled.img`
- 
-`
+
 export const Descript = styled.p`
 font-size: 14px;
 color:white;

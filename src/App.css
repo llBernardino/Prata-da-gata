@@ -4,27 +4,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Eczar:wght@400..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+/* body:before, body:after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  background: url('./img/bannerprata.jpg') no-repeat center / cover;
+  z-index: -1;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+body:after {
+  transform: scaleY(-1);
+  top: 100vh;
+} */
 
 .App-link {
   color: #61dafb;
@@ -39,9 +34,9 @@
   }
 }
 .css-heg063-MuiTabs-flexContainer {
-  justify-content: center;
-  display: flex;
-  flex-wrap: wrap;
+  justify-content: center !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
 }
 
 
@@ -75,4 +70,8 @@
 }
 .slick-dots {
   bottom: -50px !important;
+}
+
+a{
+  text-decoration: none !important;
 }
