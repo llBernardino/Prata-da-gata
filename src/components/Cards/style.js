@@ -10,7 +10,6 @@ export const Image1 = styled.img`
   border-radius:200px;
   display:inline !important;
 `
-
 export const Card = styled.article`
   max-width: 220px;
 `;

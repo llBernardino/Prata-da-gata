@@ -19,7 +19,7 @@ export const Cart = () => {
           <Row className="justify-content-center d-flex w-100">
             {cartItems.map((product) => (
               <CardProduct
-              key={product.id} // Certifique-se de que cada produto tenha um id único
+              key={product.id}
               title={product.title}
               descript={product.descript}
               image={`${BASE_URL}${product.image}`}
